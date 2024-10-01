@@ -1,0 +1,106 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  
+    input {
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s;
+  
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+    }
+  
+    table {
+      width: 100%;
+      max-width: 600px;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+  
+      th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+  
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+  
+      th {
+        background-color: #f4f4f4;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #e2e2e2;
+        }
+      }
+    }
+  
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #218838;
+      }
+      
+      margin-left: 5px; 
+    }
+  
+    a {
+      text-decoration: none;
+      color: #007bff;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .createButton {
+    padding: 10px 15px;
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .createButton:hover {
+    background-color: #0056b3; 
+  }
+
+  .editButton {
+    padding: 10px 15px;
+    background-color: #218838; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .editButton:hover {
+    background-color: #218838;
+  }
+  
+  
+  
+
+  
+  
