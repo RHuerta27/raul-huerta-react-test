@@ -38,7 +38,6 @@ export const updateProduct = createAsyncThunk(
   }
 );
 
-// Eliminar producto
 export const deleteProduct = createAsyncThunk(
   'products/deleteProduct',
   async (id: number) => {

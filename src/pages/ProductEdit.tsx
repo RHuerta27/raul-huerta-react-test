@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchProducts, updateProduct } from '../slices/productsSlice';
+import { updateProduct } from '../slices/productsSlice';
 import { AppDispatch } from '../store'; 
 import styles from '../styles/Products.module.scss';
 
