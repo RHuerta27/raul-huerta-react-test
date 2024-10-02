@@ -1,55 +1,51 @@
-# Getting Started with Create React App
+# Proyecto de Administración de Productos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación de administración de productos creada con [Create React App](https://github.com/facebook/create-react-app), utilizando TypeScript, Redux, y Sass.
 
-## Available Scripts
+## Requisitos Previos
 
-In the project directory, you can run:
+Asegúrate de tener instalado lo siguiente en tu entorno:
 
-### `npm install`
+- Node.js (versión recomendada: 14.x o superior)
+- npm (versión 6.x o superior)
 
-Install node modules
+## Instalación
 
-### `npm start`
+Sigue estos pasos para instalar y ejecutar el proyecto en modo desarrollo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 1. Clona el repositorio
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+git clone https://github.com/RHuerta27/raul-huerta-react-test.git
+cd raul-huerta-react-test
+```
+### 2. Instala Dependencias
 
-### `LOGIN CREDENTIALS`
+```bash
+npm install
+```
 
+### 3. Inicia el poryecto 
+
+```bash
+npm start
+```
+
+## Puedes generar un nuevo usuario o bien utilizar las credenciales por default para el login 
+
+```bash
 email: admin@gmail.com
 password: Admin123$
+```
 
-### `npm test`
+## Ejecutar pruebas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm test
+```
 
-### `npm run build`
+## Generar Build para Producción
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run build
+```
