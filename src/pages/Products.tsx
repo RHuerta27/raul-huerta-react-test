@@ -38,6 +38,8 @@ const Products: React.FC = () => {
     const aValue = a[sortKey as keyof Product];
     const bValue = b[sortKey as keyof Product];
 
+    if (aValue === undefined || bValue === undefined) return 0;
+
     if (aValue < bValue) {
       return sortDirection === 'ascending' ? -1 : 1;
     }
@@ -60,8 +62,8 @@ const Products: React.FC = () => {
     setSortDirection(direction);
   };
 
-  const handleDelete = (id: number) => {
-    if (window.confirm('¿Estás seguro de que deseas eliminar este producto?')) {
+  const handleDelete = (id: number | undefined) => {
+    if (id && window.confirm('¿Estás seguro de que deseas eliminar este producto?')) {
       dispatch(deleteProduct(id));  
     }
   };

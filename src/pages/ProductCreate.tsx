@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../store';
 import { addProduct } from '../slices/productsSlice';
 import styles from '../styles/Products.module.scss';
 import { useNavigate } from 'react-router-dom';
@@ -10,10 +10,10 @@ const ProductCreate: React.FC = () => {
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
   const [error, setError] = useState('');
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!title || !price || !description || !category) {
@@ -29,8 +29,12 @@ const ProductCreate: React.FC = () => {
       image: 'https://i.pravatar.cc',
     };
     
-    dispatch(addProduct(newProduct));
-    navigate('/products'); 
+    try {
+      await dispatch(addProduct(newProduct)).unwrap();
+      navigate('/products');
+    } catch (err: any) {
+      setError('Hubo un error al agregar el producto.');
+    }
   };
 
   return (

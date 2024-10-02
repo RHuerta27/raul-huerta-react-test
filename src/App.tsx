@@ -6,6 +6,7 @@ import NotFound from './pages/NotFound';
 import Products from './pages/Products';
 import ProductCreate from './pages/ProductCreate';
 import ProductEdit from './pages/ProductEdit';
+import ProductDetail from './pages/ProductDetails'; // Importa el componente ProductDetail
 import { RootState } from './store'; 
 
 const App: React.FC = () => {
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <Route path="/products" element={isAuthenticated ? <Products /> : <Navigate to="/login" />} />
         <Route path="/productcreate" element={isAuthenticated ? <ProductCreate /> : <Navigate to="/login" />} />
         <Route path="/productedit/:id" element={isAuthenticated ? <ProductEdit /> : <Navigate to="/login" />} />
+        <Route path="/products/:id" element={isAuthenticated ? <ProductDetail /> : <Navigate to="/login" />} /> {/* Ruta para ProductDetail */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
